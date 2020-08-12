@@ -1,0 +1,3 @@
+CREATE DATABASE habet;
+CREATE USER habet_user WITH ENCRYPTED PASSWORD 'habet_password';
+GRANT ALL PRIVILEGES ON DATABASE habet TO habet_user;
