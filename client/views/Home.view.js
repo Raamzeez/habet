@@ -4,7 +4,7 @@ import { View, SafeAreaView, TouchableOpacity, StyleSheet, Text } from 'react-na
 
 const Home = () => {
 	return (
-		<SafeAreaView style={styles.container}>
+		<>
 			<View style={styles.header}>
 				<Text style={styles.title}>Habet</Text>
 			</View>
@@ -33,15 +33,11 @@ const Home = () => {
 				</TouchableOpacity>
 			</View>
 			<StatusBar style='auto' />
-		</SafeAreaView>
+		</>
 	)
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1, //Each container of a new view should be set to 1. 1 will represent 100% of the usable space
-		backgroundColor: '#fff',
-	},
 	header: {
 		flex: 0.1, //The header portion of the view will take 10% of the usable space
 		backgroundColor: 'gold', //This color is temporary - It is just there to visualize the space that the header portion takes
@@ -56,7 +52,7 @@ const styles = StyleSheet.create({
 		flex: 0.7, //The body portion of the view (which contains the text) will take up 70% of the usable space
 		backgroundColor: 'aqua', //This color is temporary - It is just there to visualize the space that the body portion takes
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
 	},
 	bodyText: {
 		marginTop: '10%',
