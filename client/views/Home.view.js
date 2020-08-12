@@ -39,12 +39,12 @@ const Home = () => {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
+		flex: 1, //Each container of a new view should be set to 1. 1 will represent 100% of the usable space
 		backgroundColor: '#fff',
 	},
 	header: {
-		flex: 0.1,
-		backgroundColor: 'gold',
+		flex: 0.1, //The header portion of the view will take 10% of the usable space
+		backgroundColor: 'gold', //This color is temporary - It is just there to visualize the space that the header portion takes
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
@@ -53,26 +53,26 @@ const styles = StyleSheet.create({
 		marginTop: 25,
 	},
 	body: {
-		flex: 0.7,
-		backgroundColor: 'aqua',
+		flex: 0.7, //The body portion of the view (which contains the text) will take up 70% of the usable space
+		backgroundColor: 'aqua', //This color is temporary - It is just there to visualize the space that the body portion takes
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
 	bodyText: {
 		marginTop: '10%',
-		marginRight: '7%',
-		marginLeft: '7%',
+		marginRight: '7%', //This margin is applied to the text so that it does not come close to the edges of the screen
+		marginLeft: '7%', //This margin is applied to the text so that it does not come close to the edges of the screen
 		fontSize: 20,
 	},
 	registerContainer: {
 		flex: 0.1,
-		backgroundColor: 'lightgreen',
+		backgroundColor: 'lightgreen', //This color is temporary - It is just there to visualize the space that the registerContainer portion takes
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
 	loginContainer: {
 		flex: 0.1,
-		backgroundColor: 'tomato',
+		backgroundColor: 'tomato', //This color is temporary - It is just there to visualize the space that the loginContainer portion takes
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
