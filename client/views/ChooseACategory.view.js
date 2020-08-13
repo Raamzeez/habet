@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemBoxes from '../components/ItemBoxes'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
 const ChooseACategory = () => {
@@ -11,23 +12,15 @@ const ChooseACategory = () => {
 				<View style={styles.subtitleContainer}>
 					<Text style={styles.subtitle}>Choose a category: </Text>
 				</View>
-				<View style={styles.categoriesContainer}>
-					<View style={styles.categoryContainer}>
-						<Text style={styles.categoryText}>Drug / Substance</Text>
-					</View>
-					<View style={styles.categoryContainer}>
-						<Text style={styles.categoryText}>Personality</Text>
-					</View>
-					<View style={styles.categoryContainer}>
-						<Text style={styles.categoryText}>Mental</Text>
-					</View>
-					<View style={styles.categoryContainer}>
-						<Text style={styles.categoryText}>Desires</Text>
-					</View>
-					<View style={styles.categoryContainer}>
-						<Text style={styles.categoryText}>Danger Inducing</Text>
-					</View>
-				</View>
+				<ItemBoxes
+					items={[
+						'Drugs / Substance',
+						'Personality',
+						'Mental',
+						'Desires',
+						'Danger Inducing',
+					]}
+				></ItemBoxes>
 				<View style={styles.buttonContainer}>
 					<View style={styles.button}>
 						<TouchableOpacity>
@@ -45,7 +38,7 @@ const styles = StyleSheet.create({
 		flex: 0.1,
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: 'rgb(245, 245, 245)'
+		backgroundColor: 'rgb(245, 245, 245)',
 	},
 	title: {
 		fontSize: 35,
@@ -88,7 +81,7 @@ const styles = StyleSheet.create({
 		backgroundColor: 'dodgerblue',
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: 'rgb(31, 116, 255)'
+		backgroundColor: 'rgb(31, 116, 255)',
 	},
 	buttonText: {
 		fontSize: 25,
