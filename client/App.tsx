@@ -3,17 +3,21 @@ import Home from './views/Home.view'
 import ChooseACategory from './views/ChooseACategory.view'
 import ChooseABadHabit from './views/ChooseABadHabit.view'
 import InitialFrequency from './views/InitialFrequency.view'
+import Memo from './views/Memo.view'
+import { Pages } from 'react-native-pages'
 import { SafeAreaView, StyleSheet } from 'react-native'
 
 export default function App() {
-	const [view, setView] = useState('initialfrequency')
 
 	return (
 		<SafeAreaView style={styles.container}>
-			{view === 'home' && <Home />}
-			{view === 'chooseacategory' && <ChooseACategory />}
-			{view === 'chooseabadhabit' && <ChooseABadHabit />}
-			{view === 'initialfrequency' && <InitialFrequency />}
+			<Pages>
+				<Home />
+				<ChooseACategory />
+				<ChooseABadHabit />
+				<InitialFrequency />
+				<Memo />
+			</Pages>
 		</SafeAreaView>
 	)
 }

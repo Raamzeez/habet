@@ -1,13 +1,12 @@
 import React from 'react'
 import ItemBoxes from '../components/ItemBoxes'
+import AddAHabitHeader from '../components/AddAHabitHeader'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
 const ChooseACategory = () => {
 	return (
 		<>
-			<View style={styles.header}>
-				<Text style={styles.title}>Add A Habit</Text>
-			</View>
+			<AddAHabitHeader />
 			<View style={styles.body}>
 				<View style={styles.subtitleContainer}>
 					<Text style={styles.subtitle}>Choose a category: </Text>
@@ -34,16 +33,6 @@ const ChooseACategory = () => {
 }
 
 const styles = StyleSheet.create({
-	header: {
-		flex: 0.1,
-		alignItems: 'center',
-		justifyContent: 'center',
-		backgroundColor: 'rgb(245, 245, 245)',
-	},
-	title: {
-		fontSize: 35,
-		marginTop: 25,
-	},
 	subtitleContainer: {
 		flex: 0.15,
 		// backgroundColor: 'dodgerblue',

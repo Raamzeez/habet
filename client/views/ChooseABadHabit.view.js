@@ -1,13 +1,12 @@
 import React from 'react'
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import AddAHabitHeader from '../components/AddAHabitHeader'
 import ItemBoxes from '../components/ItemBoxes'
 
 const ChooseABadHabitView = () => {
 	return (
 		<>
-			<View style={styles.header}>
-				<Text style={styles.title}>Add A Habit</Text>
-			</View>
+			<AddAHabitHeader />
 			<View style={styles.body}>
 				<ItemBoxes
 					items={['Drugs / Substance', 'Alchohol', 'Opioids', 'Marijuana', 'Tobacco']}
