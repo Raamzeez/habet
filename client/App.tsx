@@ -6,6 +6,9 @@ import InitialFrequency from './views/InitialFrequency.view'
 import Memo from './views/Memo.view'
 import Goal from './views/Goal.view'
 import AllowPermissions from './views/AllowPermissions.view'
+import MoreReminders from './views/MoreReminders.view'
+import PersonalMessage from './views/PersonalMessage.view'
+import SettingUp from './views/SettingUp.view'
 import { Pages } from 'react-native-pages'
 import { SafeAreaView, StyleSheet } from 'react-native'
 
@@ -21,6 +24,9 @@ export default function App() {
 				<Memo />
 				<Goal />
 				<AllowPermissions />
+				<MoreReminders />
+				<PersonalMessage />
+				<SettingUp />
 			</Pages>
 		</SafeAreaView>
 	)

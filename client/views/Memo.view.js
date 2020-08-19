@@ -9,9 +9,7 @@ import Question from '../components/Question'
 const Memo = () => {
 	const [text, changeText] = useState('')
 
-	const wordsRemaining = () => {
-		return 30 - text.split(' ').length + 1
-	}
+	const wordsRemaining = 30 - text.split(' ').length + 1
 
 	return (
 		<>
@@ -31,10 +29,10 @@ const Memo = () => {
 						style={{
 							fontSize: 15,
 							marginTop: 20,
-							color: wordsRemaining() <= 5 ? 'red' : 'black',
+							color: wordsRemaining <= 5 ? 'red' : 'black',
 						}}
 					>
-						{wordsRemaining() || 30} words remaining
+						{wordsRemaining || 30} words remaining
 					</Text>
 				</View>
 				<View style={styles.buttonContainer}>
