@@ -1,24 +1,27 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import { Picker } from '@react-native-community/picker'
 import NumericInput from 'react-native-numeric-input'
 import YellowNoteHeader from '../components/YellowNoteHeader'
 import AddAHabitHeader from '../components/AddAHabitHeader'
+import BlueInfoBox from '../components/BlueInfoBox'
 import Question from '../components/Question'
 
-const InitialFrequency = () => {
-	const [state, setState] = useState({
-		timePeriod: 'day',
-		times: 1
+const Goal = () => {
+
+    const [state, setState] = useState({
+		timePeriod: 'week',
+		times: 3
 	})
 
 	return (
 		<>
 			<AddAHabitHeader />
-			<YellowNoteHeader text="Let's Stop Your Alchohol Habit!" />
+			<YellowNoteHeader text='Wow 3 times a day is a lot...' />
 			<View style={styles.body}>
-				<Question question="How Often Do You Drink Alcohol?" />
-				<View style={styles.selectionsContainer}>
+				<BlueInfoBox text='We are committed to doing everything we can to help you stop, but we need you to work with us as well...' />
+				<Question question="How about we start you with this weekly goal?" />
+                <View style={styles.selectionsContainer}>
 					<View style={{ marginLeft: 20 }}>
 						<NumericInput value={state.times} type='up-down' />
 					</View>
@@ -29,15 +32,9 @@ const InitialFrequency = () => {
 						<Picker
 							selectedValue={state.timePeriod}
 							style={{ height: 50, width: 100, marginBottom: '160%' }}
-							onValueChange={(itemValue) =>
-								setState({
-									timePeriod: itemValue,
-									times: state.times
-								})
-							}
 						>
 							<Picker.Item label='Month' value='month' />
-							<Picker.Item label='Week' value='week' />
+                            <Picker.Item label='Week' value='week' />
 							<Picker.Item label='Day' value='day' />
 							<Picker.Item label='Hour' value='hour' />
 						</Picker>
@@ -85,7 +82,6 @@ const styles = StyleSheet.create({
 	button: {
 		height: 75,
 		width: 200,
-		backgroundColor: 'dodgerblue',
 		justifyContent: 'center',
 		alignItems: 'center',
 		// backgroundColor: 'rgb(31, 116, 255)',
@@ -97,4 +93,4 @@ const styles = StyleSheet.create({
 	},
 })
 
-export default InitialFrequency
+export default Goal

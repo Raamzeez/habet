@@ -3,6 +3,8 @@ import { View, StyleSheet, Text, TextInput, TouchableOpacity } from 'react-nativ
 import AddAHabitHeader from '../components/AddAHabitHeader'
 import YellowNoteHeader from '../components/YellowNoteHeader'
 import BlueInfoBox from '../components/BlueInfoBox'
+import Question from '../components/Question'
+
 
 const Memo = () => {
 	const [text, changeText] = useState('')
@@ -16,10 +18,9 @@ const Memo = () => {
 			<AddAHabitHeader />
 			<YellowNoteHeader text='Wow 3 times a day is a lot...' />
 			<View style={styles.body}>
-				<BlueInfoBox />
-				<View style={styles.questionContainer}>
-					<Text style={styles.questionText}>Why Do You Want To Stop?</Text>
-				</View>
+				<BlueInfoBox text="Do you know that people who drink more than once a day are more likely to
+					develop heart disease?"/>
+				<Question question="Why Do You Want To Stop?" />
 				<View style={styles.textBoxContainer}>
 					<TextInput
 						style={styles.textBox}

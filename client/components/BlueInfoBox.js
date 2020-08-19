@@ -1,13 +1,12 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native'
 
-const BlueInfoBox = () => {
+const BlueInfoBox = ({text}) => {
 	return (
 		<View style={styles.boxContainer}>
 			<View style={styles.box}>
 				<Text style={styles.boxText}>
-					Do you know that people who drink more than once a day are more likely to
-					develop heart disease?
+					{text}
 				</Text>
 			</View>
 		</View>

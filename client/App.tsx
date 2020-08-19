@@ -4,6 +4,8 @@ import ChooseACategory from './views/ChooseACategory.view'
 import ChooseABadHabit from './views/ChooseABadHabit.view'
 import InitialFrequency from './views/InitialFrequency.view'
 import Memo from './views/Memo.view'
+import Goal from './views/Goal.view'
+import AllowPermissions from './views/AllowPermissions.view'
 import { Pages } from 'react-native-pages'
 import { SafeAreaView, StyleSheet } from 'react-native'
 
@@ -17,6 +19,8 @@ export default function App() {
 				<ChooseABadHabit />
 				<InitialFrequency />
 				<Memo />
+				<Goal />
+				<AllowPermissions />
 			</Pages>
 		</SafeAreaView>
 	)
